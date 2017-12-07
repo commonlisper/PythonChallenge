@@ -1,7 +1,7 @@
 import geoplotlib
 
 
-class Coordinates:
+class Location:
     def __init__(self, latitude, longitude):
         self.__latitude = latitude
         self.__longitude = longitude
@@ -35,5 +35,5 @@ class Coordinates:
             .format(latitude=self.latitude, longitude=self.longitude)
 
     def __add__(self, other):
-        return Coordinates(self.latitude + other.latitude,
-                           self.longitude + other.longitude)
+        return Location(self.latitude + other.latitude,
+                        self.longitude + other.longitude)
