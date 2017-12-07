@@ -1,5 +1,4 @@
 import geoplotlib
-from geoplotlib.utils import DataAccessObject
 
 
 class Coordinates:
@@ -24,8 +23,8 @@ class Coordinates:
         self.__longitude = longitude
 
     def visualize(self):
-        geoplotlib.dot(DataAccessObject(
-            {'lat': [self.latitude], 'lon': [self.longitude]}),
+        geoplotlib.dot(
+            {'lat': [self.latitude], 'lon': [self.longitude]},
             color='green',
             point_size=10)
 
